@@ -2,16 +2,16 @@ import pyautogui
 import numpy as np
 import time
 
-WIDTH = 768
-HEIGHT = 1280
+WIDTH = 600
+HEIGHT = 1024
 
 UPPER_LEFT = (0, 45)
 
 CARD = [
-  (250, 1200),
-  (380, 1200),
-  (510, 1200),
-  (640, 1200),
+  (190, 960),
+  (300, 960),
+  (410, 960),
+  (520, 960),
 ]
 
 EPSILON = .2
@@ -25,14 +25,14 @@ while True:
     pyautogui.click(CARD[card_idx])
     """
     Playing Area
-      (88, 181)
-      (678, 181)
-      (94, 985)
-      (671, 985)
+      (70, 160)
+      (530, 160)
+      (70, 800)
+      (530, 800)
     """
-    play_x = np.random.randint(88, 679)
+    play_x = np.random.randint(70, 530)
     # play_y = np.random.randint(181, 986)
-    play_y = np.random.randint(615, 986)  # Playing only my side
+    play_y = np.random.randint(510, 800)  # Playing only my side
     pyautogui.click((play_x, play_y))
   else:
     # do nothing
